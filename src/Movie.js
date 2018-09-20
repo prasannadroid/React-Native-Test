@@ -1,8 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class Movie extends React.Component{
+export class Movie extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-    render(){
-        return(<div>hello</div>)
+    movieTittle = this.props.year + ' ' + this.props.genre + ' ' + this.props.tittle;
+
+    render() {
+        return (
+            <div>
+                <div> {this.movieTittle}</div>
+                <div> {this.props.description}</div>
+
+            </div>
+
+        )
     }
 }
